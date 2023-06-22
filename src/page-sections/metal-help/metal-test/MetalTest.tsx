@@ -4,7 +4,7 @@ const MetalTest = () => {
   return (
     <div className='flex flex-col h-full gap-5'>
       <p className='text-[14px] font-bold'>Ментальное тестирование</p>
-      <div className='grid h-full grid-cols-2 grid-rows-2 gap-4 justify-items-center'>
+      <div className='grid h-full grid-cols-1 grid-rows-2 gap-4 sm:grid-cols-2 justify-items-center'>
         <div className='relative w-full col-span-1'>
           <Image
             className='!relative  rounded-lg !w-full !h-full object-cover'

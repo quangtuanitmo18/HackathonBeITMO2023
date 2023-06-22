@@ -4,6 +4,9 @@
 
 @import 'reset';
 
+html {
+  font-family: var(--font-primary);
+}
 // * {
 //   scrollbar-width: thin;
 //   scrollbar-color: white;
@@ -12,6 +15,12 @@
 .react-calendar {
   outline: none;
   border: none !important;
+  width: 250px !important;
+}
+@media only screen and (min-width: 640px) {
+  .react-calendar {
+    width: 350px !important;
+  }
 }
 // .react-calendar__navigation button {
 //   color: #6f48eb;
@@ -104,15 +113,19 @@
   width: calc(100% - 76.8px) !important;
 }
 #id-events::-webkit-scrollbar {
-  width: 1px;
+  width: 5px;
+  height: 5px;
 }
+// #id-events::-webkit-sc {
+//   width: 5px;
+// }
 
 #id-events::-webkit-scrollbar-track {
   background: white;
 }
 
 #id-events::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: #e7e7e7;
   border-radius: 10px;
   // border: 3px solid black;
 }

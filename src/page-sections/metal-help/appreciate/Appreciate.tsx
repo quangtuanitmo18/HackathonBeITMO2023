@@ -6,19 +6,49 @@ const Appreciate = () => {
       <p className='text-[14px] font-bold mb-8 -ml-7 -mt-1'>Как вы себя чувствуете?</p>
       <div className='flex justify-between gap-6 mb-9 '>
         <div className=''>
-          <Image className='!relative !w-[34.23px] !h-[32.71px]' src={'/star.svg'} alt='event' sizes='100%' fill />
+          <Image
+            className='!relative !w-[20px] !h-[18px] sm:!w-[34.23px] sm:!h-[32.71px]'
+            src={'/star.svg'}
+            alt='event'
+            sizes='100%'
+            fill
+          />
         </div>
         <div className=''>
-          <Image className='!relative !w-[34.23px] !h-[32.71px]' src={'/star.svg'} alt='event' sizes='100%' fill />
+          <Image
+            className='!relative  !w-[20px] !h-[18px] sm:!w-[34.23px] sm:!h-[32.71px]'
+            src={'/star.svg'}
+            alt='event'
+            sizes='100%'
+            fill
+          />
         </div>
         <div className=''>
-          <Image className='!relative !w-[34.23px] !h-[32.71px]' src={'/star.svg'} alt='event' sizes='100%' fill />
+          <Image
+            className='!relative !w-[20px] !h-[18px] sm:!w-[34.23px] sm:!h-[32.71px]'
+            src={'/star.svg'}
+            alt='event'
+            sizes='100%'
+            fill
+          />
         </div>
         <div className=''>
-          <Image className='!relative !w-[34.23px] !h-[32.71px]' src={'/star.svg'} alt='event' sizes='100%' fill />
+          <Image
+            className='!relative !w-[20px] !h-[18px] sm:!w-[34.23px] sm:!h-[32.71px]'
+            src={'/star.svg'}
+            alt='event'
+            sizes='100%'
+            fill
+          />
         </div>
         <div className=''>
-          <Image className='!relative !w-[34.23px] !h-[32.71px]' src={'/star.svg'} alt='event' sizes='100%' fill />
+          <Image
+            className='!relative !w-[20px] !h-[18px] sm:!w-[34.23px] sm:!h-[32.71px]'
+            src={'/star.svg'}
+            alt='event'
+            sizes='100%'
+            fill
+          />
         </div>
       </div>
     </div>

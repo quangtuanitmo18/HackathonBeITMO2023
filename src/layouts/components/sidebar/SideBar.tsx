@@ -71,11 +71,8 @@ const SideBar = () => {
     <>
       <button
         onClick={() => setIsHidden((prev) => !prev)}
-        data-drawer-target='default-sidebar'
-        data-drawer-toggle='default-sidebar'
-        aria-controls='default-sidebar'
         type='button'
-        className='fixed inline-flex items-center justify-center ml-4 text-sm text-gray-500 rounded-lg mt-9 max-h-2 lg:hidden '
+        className='fixed p-1 mt-6 ml-4 rounded-sm lg:hidden bg-gray-gray12'
       >
         {/* <span className='sr-only'>Open sidebar</span> */}
         <svg
