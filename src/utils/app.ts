@@ -149,5 +149,5 @@ export const HoverColorTextBeWithCategoryEvent = ({
 
 export const calcBeValueGauge = (beValue: number[]) => {
   let result = beValue.reduce((partialSum, a) => partialSum + a, 0)
-  return (result / 6).toFixed(0)
+  return ((result - 100) / 6).toFixed(0)
 }

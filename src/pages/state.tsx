@@ -38,6 +38,7 @@ const State = () => {
     Number(scoreCategory?.BeFriendly) > 100 ? 100 : Number(scoreCategory?.BeFriendly),
     Number(scoreCategory?.BeEco) > 100 ? 100 : Number(scoreCategory?.BeEco),
     Number(scoreCategory?.BeOpen) > 100 ? 100 : Number(scoreCategory?.BeOpen),
+    100,
     0
   ]
   // console.log(beValue)
