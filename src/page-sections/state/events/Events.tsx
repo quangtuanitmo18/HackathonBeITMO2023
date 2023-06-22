@@ -59,7 +59,7 @@ const Events = () => {
 
   return (
     <div
-      className='w-full 2xl:w-1/2  p-4  ml-auto border border-solid rounded-lg border-1 border-gray-gray12 text-base-black h-[487px] overflow-y-auto '
+      className='w-full 2xl:w-1/2  p-4  ml-auto border border-solid rounded-lg border-1 border-gray-gray12 text-base-black  overflow-y-auto max-h-[512px] h-full overflow-x-auto'
       id='id-events'
     >
       <p className='text-base font-bold'>Предстоящие мероприятия</p>
@@ -71,7 +71,7 @@ const Events = () => {
         </div> */}
         <Filter></Filter>
       </div>
-      <ul className='flex flex-col gap-3 mt-4'>
+      <ul className='flex flex-col gap-3 mt-4 w-[750px] md:w-auto'>
         {filterEventsFutureNotRegister &&
           filterEventsFutureNotRegister.map((item, index) => (
             <li onClick={openModal} className='flex items-center justify-between group' key={index}>
@@ -96,7 +96,7 @@ const Events = () => {
                   ${HoverColorBGBeWithCategoryEvent({
                     itemEvent: item
                   })} 
-                  group-hover:cursor-pointer max-w-[300px] truncate`}
+                  group-hover:cursor-pointer max-w-[400px] truncate`}
                 >
                   {item.name}
                 </div>
@@ -117,7 +117,7 @@ const Events = () => {
                   })} 
                   ${HoverColorBGBeWithCategoryEvent({
                     itemEvent: item
-                  })} `}
+                  })} max-w-[150px] truncate`}
                 >
                   {item.type}
                 </div>

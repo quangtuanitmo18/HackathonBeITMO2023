@@ -42,7 +42,7 @@ const Header = (props: Props) => {
 
   return (
     <header className='flex items-center'>
-      <h1 className='ml-8 text-xl font-bold lg:text-3xl justify-self-center font-secondary'>{heading}</h1>
+      <h1 className='ml-16 font-bold md:text-xl lg:text-3xl justify-self-center font-secondary'>{heading}</h1>
       <div className='flex items-center gap-4 ml-auto'>
         <div className='hidden p-3 rounded cursor-pointer lg:block hover:bg-gray-gray12'>
           <Image src='/search.svg' alt='' width={16} height={16}></Image>
