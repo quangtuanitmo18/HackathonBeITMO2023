@@ -59,7 +59,7 @@ const Events = () => {
 
   return (
     <div
-      className='w-full lg:w-1/2 p-4  ml-auto border border-solid rounded-lg border-1 border-gray-gray12 text-base-black max-h-[487px] overflow-y-auto'
+      className='w-full lg:w-1/2 p-4  ml-auto border border-solid rounded-lg border-1 border-gray-gray12 text-base-black h-[487px] overflow-y-auto '
       id='id-events'
     >
       <p className='text-base font-bold'>Предстоящие мероприятия</p>
