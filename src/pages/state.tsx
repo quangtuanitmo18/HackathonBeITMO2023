@@ -10,6 +10,7 @@ import Loading from '@/components/loading'
 import { eventsApi } from '@/apis/events/events.api'
 import { EventNotHappendedData } from '@/types/events/eventHappendAndNotHappend.type'
 import { calcBeValueGauge } from '@/utils/app'
+import Image from 'next/image'
 
 const State = () => {
   const { queryConfigQuery } = useQueryConfig()
@@ -44,15 +45,15 @@ const State = () => {
 
   return (
     <MainLayout heading='Состояние'>
-      <div className='flex flex-col gap-10 lg:flex-row'>
-        <div className='lg:w-[35%]  p-5 border border-solid border-gray-gray12 rounded-md flex flex-col gap-6 items-center justify-center'>
+      <div className='flex flex-col flex-wrap gap-10 xl:flex-row xl:flex-nowrap'>
+        <div className=' xl:w-[35%] lg:w-[40%] sm:w-[60%]   p-5 border border-solid border-gray-gray12 rounded-md flex flex-col gap-6 items-center justify-center'>
           <p className='text-black text-[14px] leading-[22px] font-bold '>Общий показатель вовлеченности</p>
           <div className=' max-w-[360px] h-[130px] flex items-center justify-center'>
             {scoreBeItmo ? <GaugeChart beValue={beValueGauge as number[]}></GaugeChart> : <Loading></Loading>}
           </div>
         </div>
 
-        <div className='lg:w-[65%] h-[250px] p-5 border border-solid border-gray-gray12 rounded-md flex items-center justify-center'>
+        <div className='xl:w-[65%] w-[100%] h-[250px] p-5 border border-solid border-gray-gray12 rounded-md flex items-center justify-center'>
           {scoreBeItmo ? (
             <LineChart beValue={beValue as number[]}></LineChart>
           ) : (
@@ -64,8 +65,44 @@ const State = () => {
       </div>
 
       {/* <Filter></Filter>  */}
-      <div className='flex flex-col mt-6 lg:flex-row lg:gap-6'>
-        <MyEvents eventsNotHappended={eventsNotHappended as EventNotHappendedData[]}></MyEvents>
+      <div className='flex flex-col gap-6 pb-6 mt-6 2xl:flex-row 2xl:pb-0'>
+        <div className='flex flex-col w-full gap-2 2xl:w-1/2'>
+          <MyEvents eventsNotHappended={eventsNotHappended as EventNotHappendedData[]}></MyEvents>
+          <div className='w-full h-full p-4 border border-solid rounded-md border-1 border-gray-gray12'>
+            <p className='mb-3 font-bold'>Рекомендации</p>
+            <div className='grid grid-cols-3 gap-2'>
+              <div className='h-full col-span-1'>
+                <Image
+                  src='/my-service-3.png'
+                  className='!relative object-cover !w-full !h-full'
+                  fill
+                  sizes='100%'
+                  alt={''}
+                ></Image>
+              </div>
+              <div className='h-full col-span-1'>
+                {' '}
+                <Image
+                  src='/my-service-1.png'
+                  className='!relative object-cover !w-full !h-full'
+                  fill
+                  sizes='100%'
+                  alt={''}
+                ></Image>
+              </div>
+              <div className='h-full col-span-1'>
+                {' '}
+                <Image
+                  src='/my-service-2.png'
+                  className='!relative object-cover !w-full !h-full rounded-md'
+                  fill
+                  sizes='100%'
+                  alt={''}
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </div>
         <Events></Events>
       </div>
     </MainLayout>
