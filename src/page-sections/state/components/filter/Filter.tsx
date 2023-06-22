@@ -54,8 +54,8 @@ const Filter = () => {
   }
   const handleFilterCategory = (categoryLink: string) => {
     if (checkCategoryItemFilter(categoryLink)) {
-      const indexCategoryLink = queryConfigQuery.category.indexOf(categoryLink)
-      const newArrCategory = [...queryConfigQuery.category]
+      const indexCategoryLink = queryConfigQuery?.category ? queryConfigQuery?.category?.indexOf(categoryLink) : -1
+      let newArrCategory = [...(queryConfigQuery?.category as string[])]
       if (indexCategoryLink > -1) {
         newArrCategory.splice(indexCategoryLink, 1)
       }
@@ -78,8 +78,8 @@ const Filter = () => {
   }
   const handleFilterRank = (rankLink: string) => {
     if (checkRankItemFilter(rankLink)) {
-      const indexRankLink = queryConfigQuery.rank.indexOf(rankLink)
-      const newArrRank = [...queryConfigQuery.rank]
+      const indexRankLink = queryConfigQuery?.rank ? queryConfigQuery?.rank?.indexOf(rankLink) : -1
+      let newArrRank = [...(queryConfigQuery.rank as string[])]
       if (indexRankLink > -1) {
         newArrRank.splice(indexRankLink, 1)
       }
