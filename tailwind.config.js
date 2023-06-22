@@ -14,7 +14,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['var(--font-open_Sans)', ...fontFamily.sans]
+        primary: ['var(--font-open_Sans)', ...fontFamily.sans],
+        secondary: ['Muller', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

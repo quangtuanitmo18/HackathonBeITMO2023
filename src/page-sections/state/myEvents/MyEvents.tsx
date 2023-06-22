@@ -15,8 +15,7 @@ const MyEvents = (props: Props) => {
   const { eventsNotHappended } = props
   // console.log(eventsNotHappended)
   return (
-    <div className='w-full  p-5 border border-solid rounded-md border-1 border-gray-gray12 h-[300px]'>
-      <p className='font-bold'>Мои мероприятия</p>
+    <>
       <ul className='flex gap-3 mt-3'>
         <Swiper
           slidesPerView={'auto'}
@@ -81,7 +80,7 @@ const MyEvents = (props: Props) => {
             ))}
         </Swiper>
       </ul>
-    </div>
+    </>
   )
 }
 
