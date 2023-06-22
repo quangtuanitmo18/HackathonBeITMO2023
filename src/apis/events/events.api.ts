@@ -13,7 +13,7 @@ export const eventsApi = {
   getEventsFutureNotRegister({ id }: { id: string }) {
     return http.get<EventFutureNotRegister>(`${URL_GET_EVENT_FUTURE_NOT_REGISTER}${id}`)
   },
-  getFilterEvents({ id, category, type }: { id: string; category?: string[]; type?: string[] }) {
-    return http.post<FilterEvent>(`${URL_GET_EVENT_FILTER}${id}`, { category: category, type: type })
+  getFilterEvents({ id, category, rank }: { id: string; category?: string[]; rank?: string[] }) {
+    return http.post<FilterEvent>(`${URL_GET_EVENT_FILTER}${id}`, { category: category, rank: rank })
   }
 }

@@ -22,7 +22,7 @@ import {
 import CheckIcon from '../components/checkIcon'
 
 const Events = () => {
-  const { queryConfig } = useQueryConfig()
+  const { queryConfigQuery } = useQueryConfig()
   const [isOpen, setIsOpen] = useState(false)
   function closeModal() {
     setIsOpen(false)
@@ -39,17 +39,23 @@ const Events = () => {
   //   staleTime: 3 * 60 * 1000
   // })
   const { data: filterEvents, isLoading: isLoadingfilterEvents } = useQuery({
-    queryKey: ['filterEvents', queryConfig],
-    queryFn: () => eventsApi.getFilterEvents({ id: queryConfig.id as string }),
+    queryKey: ['filterEvents', queryConfigQuery],
+    queryFn: () =>
+      eventsApi.getFilterEvents({
+        id: queryConfigQuery.id as string,
+        category: queryConfigQuery.category as string[] | undefined,
+        rank: queryConfigQuery.rank as string[] | undefined
+      }),
     keepPreviousData: true,
-    staleTime: 3 * 60 * 1000
+    staleTime: 3 * 60 * 1000,
+    enabled: queryConfigQuery.id !== ''
   })
   const filterEventsFutureNotRegister = useMemo(
     () => filterEvents?.data.data.eventsNotRegisteredResult,
     [filterEvents?.data.data.eventsNotRegisteredResult]
   )
 
-  // console.log(eventFutureNotregisterData)
+  console.log(filterEventsFutureNotRegister)
 
   return (
     <div
