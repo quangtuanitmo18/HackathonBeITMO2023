@@ -12,18 +12,20 @@ import { EventNotHappendedData } from '@/types/events/eventHappendAndNotHappend.
 import { calcBeValueGauge } from '@/utils/app'
 
 const State = () => {
-  const { queryConfig } = useQueryConfig()
+  const { queryConfigQuery } = useQueryConfig()
   const { data: scoreBeItmo, isLoading: isLoadingscoreBeItmo } = useQuery({
-    queryKey: ['scoreBeItmo', queryConfig],
-    queryFn: () => scoreBeItmoApi.getScoreBeItmo({ id: queryConfig.id as string }),
+    queryKey: ['scoreBeItmo', queryConfigQuery.id],
+    queryFn: () => scoreBeItmoApi.getScoreBeItmo({ id: queryConfigQuery.id as string }),
     keepPreviousData: true,
-    staleTime: 3 * 60 * 1000
+    staleTime: 3 * 60 * 1000,
+    enabled: queryConfigQuery.id !== ''
   })
   const { data: eventsHappendAndNotHappend, isLoading: isLoadingEventsHappendAndNotHappend } = useQuery({
-    queryKey: ['eventsHappendAndNotHappend', queryConfig],
-    queryFn: () => eventsApi.getEventsNotHappend({ id: queryConfig.id as string }),
+    queryKey: ['eventsHappendAndNotHappend', queryConfigQuery.id],
+    queryFn: () => eventsApi.getEventsNotHappend({ id: queryConfigQuery.id as string }),
     keepPreviousData: true,
-    staleTime: 3 * 60 * 1000
+    staleTime: 3 * 60 * 1000,
+    enabled: queryConfigQuery.id !== ''
   })
   const eventsNotHappended = eventsHappendAndNotHappend?.data.data.eventsNotHappended
 
@@ -37,7 +39,7 @@ const State = () => {
     Number(scoreCategory?.BeOpen) > 100 ? 100 : Number(scoreCategory?.BeOpen),
     0
   ]
-  console.log(beValue)
+  // console.log(beValue)
   const beValueGauge = [calcBeValueGauge(beValue), 100 - Number(calcBeValueGauge(beValue))]
 
   return (
