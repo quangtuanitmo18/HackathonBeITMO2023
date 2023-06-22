@@ -44,7 +44,7 @@ const State = () => {
   const beValueGauge = [calcBeValueGauge(beValue), 100 - Number(calcBeValueGauge(beValue))]
 
   return (
-    <MainLayout heading='Состояние'>
+    <MainLayout heading='Дашборд'>
       <div className='flex flex-col flex-wrap gap-10 xl:flex-row xl:flex-nowrap'>
         <div className=' xl:w-[35%] lg:w-[40%] sm:w-[60%]   p-5 border border-solid border-gray-gray12 rounded-md flex flex-col gap-6 items-center justify-center'>
           <p className='text-black text-[14px] leading-[22px] font-bold '>Общий показатель вовлеченности</p>
@@ -52,7 +52,6 @@ const State = () => {
             {scoreBeItmo ? <GaugeChart beValue={beValueGauge as number[]}></GaugeChart> : <Loading></Loading>}
           </div>
         </div>
-
         <div className='xl:w-[65%] w-[100%] h-[250px] p-5 border border-solid border-gray-gray12 rounded-md flex items-center justify-center'>
           {scoreBeItmo ? (
             <LineChart beValue={beValue as number[]}></LineChart>
@@ -67,8 +66,17 @@ const State = () => {
       {/* <Filter></Filter>  */}
       <div className='flex flex-col gap-6 pb-6 mt-6 2xl:flex-row 2xl:pb-0'>
         <div className='flex flex-col w-full gap-2 2xl:w-1/2'>
-          <MyEvents eventsNotHappended={eventsNotHappended as EventNotHappendedData[]}></MyEvents>
-          <div className='w-full h-full p-4 border border-solid rounded-md border-1 border-gray-gray12'>
+          <div className='w-full  p-5 border border-solid rounded-md border-1 border-gray-gray12 h-[300px] '>
+            <p className='font-bold'>Мои мероприятия</p>
+            {eventsHappendAndNotHappend ? (
+              <MyEvents eventsNotHappended={eventsNotHappended as EventNotHappendedData[]}></MyEvents>
+            ) : (
+              <div className='flex items-center justify-center h-full'>
+                <Loading></Loading>
+              </div>
+            )}
+          </div>
+          <div className='p-4 border border-solid rounded-md w-fullp-4 border-1 border-gray-gray12'>
             <p className='mb-3 font-bold'>Рекомендации</p>
             <div className='grid grid-cols-3 gap-2'>
               <div className='h-full col-span-1'>

@@ -9,7 +9,7 @@ import Consultation from '@/page-sections/metal-help/consultation'
 const State = () => {
   const beValueGauge = [87, 13]
   return (
-    <MainLayout heading='Состояние'>
+    <MainLayout heading='Ментальная помощь'>
       <div className='flex flex-col flex-wrap gap-6 lg:flex-row 2xl:flex-nowrap'>
         <div className='2xl:w-[33%] lg:w-[45%] w-full grid gap-6'>
           <div className='flex flex-col items-center justify-center gap-6 p-5 border border-solid rounded-md border-gray-gray12 '>

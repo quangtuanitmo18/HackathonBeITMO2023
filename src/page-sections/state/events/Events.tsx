@@ -55,7 +55,7 @@ const Events = () => {
     [filterEvents?.data.data.eventsNotRegisteredResult]
   )
 
-  console.log(filterEventsFutureNotRegister)
+  // console.log(filterEventsFutureNotRegister)
 
   return (
     <div
@@ -218,7 +218,7 @@ const Events = () => {
                       </div>
                       <div className='p-6 md:col-span-3'>
                         <div className='flex items-center justify-between'>
-                          <h2 className='items-end text-2xl font-semibold text-base-black'>
+                          <h2 className='items-end text-2xl font-semibold text-base-black font-secondary'>
                             Выезд ПИиКТ в УСОЦ «Ягодное»
                           </h2>
                           <div className='justify-end'>

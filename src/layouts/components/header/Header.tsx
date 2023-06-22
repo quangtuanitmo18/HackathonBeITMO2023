@@ -42,7 +42,7 @@ const Header = (props: Props) => {
 
   return (
     <header className='flex items-center'>
-      <h1 className='ml-8 text-xl font-bold lg:text-3xl justify-self-center'>{heading}</h1>
+      <h1 className='ml-8 text-xl font-bold lg:text-3xl justify-self-center font-secondary'>{heading}</h1>
       <div className='flex items-center gap-4 ml-auto'>
         <div className='hidden p-3 rounded cursor-pointer lg:block hover:bg-gray-gray12'>
           <Image src='/search.svg' alt='' width={16} height={16}></Image>
@@ -55,7 +55,7 @@ const Header = (props: Props) => {
               <div className='flex items-center gap-2 cursor-pointer'>
                 <div className='border-2 border-solid rounded-full border-primary-blue '>
                   <Image
-                    src='https://source.unsplash.com/random'
+                    src='/avt-student.png'
                     alt=''
                     fill
                     className='object-cover rounded-full !relative !w-[35px] !h-[35px] p-[1px]'
@@ -124,7 +124,7 @@ const Header = (props: Props) => {
                         >
                           <div className='border-2 border-solid rounded-full border-primary-blue '>
                             <Image
-                              src='https://source.unsplash.com/random'
+                              src='/avt-student.png'
                               alt=''
                               fill
                               className='object-cover rounded-full !relative !w-[35px] !h-[35px] p-[1px]'
