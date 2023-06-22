@@ -2,7 +2,7 @@ const Newspaper = () => {
   return (
     <div className='flex-col'>
       <p className='text-[14px] font-bold mb-5 -ml-1 -mt-1'>Статьи</p>
-      <div className='grid justify-between gap-3 overflow-auto max-h-[300px]'>
+      <div className='grid justify-between gap-3 '>
         <div className='border border-solid border-gray-gray12 rounded-md text-[12px] leading-[18px] px-2 py-1'>
           Что такое ментальное здоровье?
         </div>
