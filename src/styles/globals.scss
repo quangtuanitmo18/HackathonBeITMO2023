@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'reset';
+
+// * {
+//   scrollbar-width: thin;
+//   scrollbar-color: white;
+// }
+
+#id-section-right {
+  width: calc(100% - 264px);
+}
+.resize-toggle-menu {
+  width: calc(100% - 76.8px) !important;
+}
+#id-events::-webkit-scrollbar {
+  width: 1px;
+}
+
+#id-events::-webkit-scrollbar-track {
+  background: white;
+}
+
+#id-events::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  // border: 3px solid black;
+}
+
+// id list students
+#id-list-students::-webkit-scrollbar {
+  width: 0px;
+}
+
+#id-list-students::-webkit-scrollbar-track {
+  background: white;
+}
+
+#id-list-students {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
