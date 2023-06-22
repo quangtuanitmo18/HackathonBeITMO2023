@@ -75,7 +75,7 @@ const SideBar = () => {
         data-drawer-toggle='default-sidebar'
         aria-controls='default-sidebar'
         type='button'
-        className='inline-flex items-center justify-center ml-4 text-sm text-gray-500 rounded-lg mt-9 max-h-2 lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-200 dark:hover:text-white dark:focus:ring-gray-600'
+        className='fixed inline-flex items-center justify-center ml-4 text-sm text-gray-500 rounded-lg mt-9 max-h-2 lg:hidden '
       >
         {/* <span className='sr-only'>Open sidebar</span> */}
         <svg

@@ -12,7 +12,7 @@ const MainLayout = (props: Props) => {
     <div className='flex'>
       <SideBar></SideBar>
 
-      <div className='pt-5 pl-6 lg:pr-8' id='id-section-right'>
+      <div className='w-full pt-5 pl-6 pr-6 lg:w-auto' id='id-section-right'>
         <Header heading={heading}></Header>
         <section className='overflow-x-hidden mt-9'>{children}</section>
       </div>

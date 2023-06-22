@@ -94,9 +94,12 @@
 
 // scroll bar
 
-#id-section-right {
-  width: calc(100% - 264px);
+@media only screen and (min-width: 1024px) {
+  #id-section-right {
+    width: calc(100% - 264px);
+  }
 }
+
 .resize-toggle-menu {
   width: calc(100% - 76.8px) !important;
 }
