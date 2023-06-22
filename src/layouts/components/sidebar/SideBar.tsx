@@ -72,7 +72,7 @@ const SideBar = () => {
       <button
         onClick={() => setIsHidden((prev) => !prev)}
         type='button'
-        className='fixed p-1 mt-6 ml-4 rounded-sm lg:hidden bg-gray-gray12'
+        className='fixed z-30 p-1 mt-6 ml-4 rounded-sm lg:hidden bg-gray-gray12'
       >
         {/* <span className='sr-only'>Open sidebar</span> */}
         <svg
