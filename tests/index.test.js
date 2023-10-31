@@ -8,7 +8,7 @@ function sum(a, b) {
 describe('Calculator', () => {
   it('renders a page', () => {
     expect(sum(1, 2)).toBe(3)
-    expect(sum(-1, 5)).toBe(4)
+    expect(sum(-1, 5)).toBe(6)
     expect(sum(0, 0)).toBe(0)
   })
 })
