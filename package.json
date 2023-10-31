@@ -59,7 +59,7 @@
       "prettier --config ./.prettierrc --write"
     ],
     "**/*.js": [
-      "jest --bail --findRelatedTests"
+      "jest"
     ]
   }
 }
