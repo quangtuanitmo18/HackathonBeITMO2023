@@ -11,7 +11,8 @@
     "lint:fix": "eslint --fix --ext ts,tsx src/",
     "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.css|*.scss)\"",
     "prettier:fix": "prettier --write \"src/**/(*.tsx|*.ts|*.css|*.scss)\"",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
@@ -41,7 +42,7 @@
     "@testing-library/react": "^14.0.0",
     "@types/lodash": "^4.14.195",
     "autoprefixer": "^10.4.14",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^13.2.2",
@@ -57,9 +58,6 @@
     ],
     "**/*.{css,scss}": [
       "prettier --config ./.prettierrc --write"
-    ],
-    "./tests/*.{js,ts}": [
-      "test"
     ]
   }
 }
